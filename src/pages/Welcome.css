@@ -1,0 +1,56 @@
+/* src/pages/Welcome.css */
+
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /* Fondo animado con degradado entre púrpura y turquesa */
+    background: linear-gradient(45deg, #0f0116, #111011, #09000e);
+    background-size: 400% 400%;
+    animation: gradientWelcome 15s ease infinite;
+  }
+  
+  @keyframes gradientWelcome {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Estilo para el logo; ajusta el ancho según prefieras */
+  .welcome-logo {
+    width: 750px;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo para el texto de bienvenida con efecto de resplandor y animación */
+  .welcome-text {
+    color: #fff;
+    font-size: 2.5rem;
+    font-family: 'Sequel Sans', sans-serif; /* Asegúrate de tener esta fuente cargada en index.html si deseas usarla */
+    animation: fadeInScale 1.5s ease-in-out forwards, glow 5s ease-in-out infinite;
+  }
+  
+  /* Animación para que el texto aparezca y se escale */
+  @keyframes fadeInScale {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  

@@ -1,0 +1,257 @@
+/* src/pages/NewOrder.css */
+
+.new-order-container {
+  background-color: #121212;
+  color: #fff;
+  min-height: 100vh;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.new-order-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.new-order-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Grupo general para cada campo */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.form-icon {
+  margin-right: 8px;
+  font-size: 1.2rem;
+}
+
+.required {
+  color: #ff4d4d;
+  margin-left: 4px;
+}
+
+/* Grupo de Cliente: dos campos en línea */
+.cliente-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.cliente-field,
+.cliente-reference-field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cliente-reference-field label {
+  font-weight: 400;
+}
+
+/* Grupo de Medida: un solo label y una fila con inputs en línea */
+.measure-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.measure-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.measure-row input {
+  width: 100px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #333;
+  background-color: #1c1c1c;
+  color: #fff;
+  outline: none;
+}
+
+.measure-row input:focus {
+  border-color: #8e0eaa;
+}
+
+.measure-label {
+  color: #ccc;
+  font-weight: 500;
+}
+
+/* Grupo para Material: dos columnas para Impresos y Papelería */
+.material-group {
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+
+.material-column {
+  width: calc(50% - 10px);
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+/* Grupo extra para Papelería: Tamaño, Tipo de Impresión y Cantidad */
+.papeleria-extra {
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+
+.papeleria-field {
+  width: calc(33.33% - 10px);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Sección para Referencia y Diseño en la misma línea */
+.file-group {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.file-column {
+  width: calc(50% - 10px);
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+/* Sección custom file para Referencia y Diseño */
+.custom-file {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.custom-file input[type="file"] {
+  display: none;
+}
+
+.upload-button {
+  display: inline-block;
+  background-color: #8e0eaa;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.upload-button:hover {
+  background-color: #a010ca;
+}
+
+.file-preview {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Vista previa de la imagen */
+.preview-img {
+  max-width: 100%;
+  max-height: 200px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  object-fit: contain;
+}
+
+/* Botón de envío */
+.submit-order-button {
+  background-color: #8e0eaa;
+  color: #fff;
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-order-button:hover {
+  background-color: #a010ca;
+}
+
+/* Agrega estos estilos al final de NewOrder.css */
+
+/* Grupo extra para Papelería */
+.papeleria-extra {
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+
+.papeleria-field {
+  width: calc(33.33% - 10px);
+  display: flex;
+  flex-direction: column;
+}
+
+/* src/pages/NewOrder.css */
+/* (Aquí se mantienen los estilos anteriores y se agrega al final:) */
+
+/* Grupo extra para Papelería */
+.papeleria-extra {
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+
+.papeleria-field {
+  width: calc(33.33% - 10px);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Agrega este bloque al final de NewOrder.css */
+.papeleria-extra {
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+
+.papeleria-field {
+  width: calc(33.33% - 10px);
+  display: flex;
+  flex-direction: column;
+}
+/* src/pages/NewOrder.css */
+/* Estilos para los campos extra de Papelería */
+.papeleria-extra {
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+
+.papeleria-field {
+  width: calc(33.33% - 10px);
+  display: flex;
+  flex-direction: column;
+}

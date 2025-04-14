@@ -1,0 +1,9 @@
+{
+    "clientes": [
+      { "id": 1, "nombre": "Cliente A" },
+      { "id": 2, "nombre": "Cliente B" }
+    ],
+    "pedidos": [
+      { "id": 1, "clienteId": 1, "ancho": 50, "alto": 70, "material": "material1", "fechaEntrega": "2025-04-20", "status": "Pendiente" }
+    ]
+  }

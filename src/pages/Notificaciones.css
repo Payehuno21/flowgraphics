@@ -1,0 +1,53 @@
+/* src/pages/Notificaciones.css */
+
+.notificaciones-container {
+  background-color: #121212;
+  color: #fff;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.notificaciones-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.notifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.notification-item {
+  background-color: #1c1c1c;
+  padding: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.notification-item:hover {
+  background-color: #333;
+}
+
+.notification-item p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+.notification-indicator {
+  display: inline-block;
+  background-color: #ff4d4d;
+  color: #fff;
+  padding: 3px 8px;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  margin-top: 5px;
+}
+
+/* Opcional: notificaciones vistas se muestran con menor opacidad */
+.notification-item.seen {
+  opacity: 0.7;
+}

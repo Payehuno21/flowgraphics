@@ -1,0 +1,101 @@
+/* src/components/Sidebar.css */
+
+.sidebar {
+  width: 250px;
+  min-height: 100vh;
+  background-color: #1f1f1f;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+}
+
+.sidebar-logo {
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #333;
+}
+
+.sidebar-logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-nav ul li {
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+.sidebar-nav ul li.active,
+.sidebar-nav ul li:hover {
+  background-color: #333;
+}
+
+.sidebar-nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Estilo para el icono del sidebar */
+.sidebar-icon {
+  font-size: 1.2rem;
+}
+
+/* Estilo para el badge de notificaciones */
+.notification-badge {
+  background-color: #ff4d4d;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: 12px;
+  position: absolute;
+  top: 12px;
+  right: 15px;
+}
+
+/* Área para el botón de cerrar sesión */
+.sidebar-footer {
+  margin-top: auto;
+  padding: 20px;
+  border-top: 1px solid #333;
+  text-align: center;
+}
+
+.logout-button {
+  background-color: #8e0eaa;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  padding: 10px 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #a010ca;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+    position: relative;
+  }
+}

@@ -1,0 +1,41 @@
+[debug] [2025-04-14T03:58:34.220Z] ----------------------------------------------------------------------
+[debug] [2025-04-14T03:58:34.222Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\VNDLS\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2025-04-14T03:58:34.223Z] CLI Version:   13.35.1
+[debug] [2025-04-14T03:58:34.223Z] Platform:      win32
+[debug] [2025-04-14T03:58:34.223Z] Node Version:  v18.20.8
+[debug] [2025-04-14T03:58:34.224Z] Time:          Sun Apr 13 2025 21:58:34 GMT-0600 (hora estándar central)
+[debug] [2025-04-14T03:58:34.224Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-04-14T03:58:34.230Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-04-14T03:58:34.231Z] > authorizing via signed-in user (payehuno21@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\VNDLS\digital-graphics-flow
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2025-04-14T03:59:54.034Z] Checked if tokens are valid: true, expires at: 1744606527115
+[debug] [2025-04-14T03:59:54.034Z] Checked if tokens are valid: true, expires at: 1744606527115
+[debug] [2025-04-14T03:59:54.036Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2025-04-14T03:59:54.036Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"digital-53a4f","name":"digital-53a4f"}
+[debug] [2025-04-14T03:59:54.497Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 409
+[debug] [2025-04-14T03:59:54.497Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":409,"message":"Requested entity already exists","status":"ALREADY_EXISTS"}}
+[debug] [2025-04-14T03:59:54.692Z] FirebaseError: Request to https://cloudresourcemanager.googleapis.com/v1/projects had HTTP Error: 409, Requested entity already exists
+    at responseToError (C:\Users\VNDLS\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:52:12)
+    at RetryOperation._fn (C:\Users\VNDLS\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:312:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to create project because there is already a project with ID digital-53a4f. Please try again with a unique project ID.

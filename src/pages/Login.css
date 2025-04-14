@@ -1,0 +1,138 @@
+/* src/pages/Login.css */
+
+/* Animación de fondo degradado oscuro */
+@keyframes gradientBackground {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Contenedor principal con fondo animado en tonos oscuros */
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(
+      45deg,
+      #000000,
+      #1c001c,
+      #310049,
+      #4c0073,
+      #000000
+    );
+    background-size: 500% 500%;
+    animation: gradientBackground 15s ease infinite;
+  }
+  
+  /* Estilo para el logo */
+  .login-logo {
+    width: 450px;
+    margin-bottom: 20px;
+  }
+  
+  /* Caja de login con fondo oscuro y efecto de borde resplandeciente */
+  .login-box {
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid #8e0eaa;
+    border-radius: 10px;
+    padding: 30px 30px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 0 20px 5px rgba(142, 14, 170, 0.7);
+    animation: borderGlow 3s ease infinite;
+  }
+  
+  /* Animación para el resplandor del borde */
+  @keyframes borderGlow {
+    0% {
+      border-color: #8e0eaa;
+      box-shadow: 0 0 20px 5px rgba(142, 14, 170, 0.7);
+    }
+    50% {
+      border-color: #4c0073;
+      box-shadow: 0 0 30px 5px rgba(76, 0, 115, 0.7);
+    }
+    100% {
+      border-color: #8e0eaa;
+      box-shadow: 0 0 20px 5px rgba(142, 14, 170, 0.7);
+    }
+  }
+  
+  /* Título de la caja de login */
+  .login-box h2 {
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  /* Formulario de login */
+  .login-form {
+    margin-top: 10px;
+  }
+  
+  /* Contenedor para cada input con icono */
+  .input-container {
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  
+  /* Estilo para los íconos (Font Awesome) */
+  .input-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1rem;
+  }
+  
+  /* Estilos para los inputs */
+  .login-form input {
+    width: 100%;
+    padding: 12px 12px 12px 40px; /* Espacio para el ícono */
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: #1c1c1c;
+    color: #fff;
+    box-sizing: border-box;
+  }
+  
+  .login-form input::placeholder {
+    color: #999;
+  }
+  
+  /* Botón con efecto hover */
+  .login-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #5b007d;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-form button:hover {
+    background-color: #8e0eaa;
+  }
+  

@@ -1,0 +1,127 @@
+/* src/pages/Dashboard.css */
+
+.dashboard-container {
+  background-color: #121212;
+  color: #fff;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.new-order-btn {
+  background-color: #8e0eaa;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.new-order-btn:hover {
+  background-color: #a010ca;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-container input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #1c1c1c;
+  color: #fff;
+}
+
+.search-container input::placeholder {
+  color: #aaa;
+}
+
+.search-icon {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.orders-table th,
+.orders-table td {
+  border: 1px solid #333;
+  padding: 10px;
+  text-align: left;
+}
+
+.orders-table th {
+  background-color: #1f1f1f;
+}
+
+/* La fila es clicable */
+.clickable-row {
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.clickable-row:hover {
+  background-color: #1f1f1f;
+}
+
+/* Badge para status */
+.status-badge {
+  display: inline-block;
+  padding: 5px 8px;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+/* Acciones */
+.orders-table td button {
+  background-color: #8e0eaa;
+  color: #fff;
+  border: none;
+  padding: 5px 8px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-right: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.orders-table td button:hover {
+  background-color: #a010ca;
+}
+
+.orders-table td select {
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid #333;
+  background-color: #1c1c1c;
+  color: #fff;
+  font-size: 0.9rem;
+}
