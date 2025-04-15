@@ -9,23 +9,25 @@ const Notificaciones = () => {
   const [notifications, setNotifications] = useState([]);
   const navigate = useNavigate();
 
+  // Escucha en tiempo real la colección "orders" ordenada por timestamp descendente.
   useEffect(() => {
-    // Crear una query para ordenar los pedidos por timestamp (más nuevos primero)
     const q = query(collection(db, "orders"), orderBy("timestamp", "desc"));
-    
-    // Suscribirse a los cambios en tiempo real
     const unsubscribe = onSnapshot(q, (snapshot) => {
+      // Extraemos el id autogenerado de Firestore y los datos del documento
       const ordersData = snapshot.docs.map(doc => ({
         id: doc.id,
         ...doc.data()
       }));
+      console.log("Pedidos desde Firestore:", ordersData);
       setNotifications(ordersData);
-    });
-
+    }, (error) => console.error("Error leyendo órdenes:", error));
     return () => unsubscribe();
   }, []);
 
-  // Al hacer clic en una notificación, navega a los detalles.
+  // Calcula cuántos pedidos tienen viewed === false.
+  const unseenCount = notifications.filter((notif) => notif.viewed === false).length;
+
+  // Al hacer click en una notificación, se navega a la vista de detalle.
   const handleNotificationClick = (id) => {
     navigate(`/order/${id}`);
   };
@@ -33,6 +35,12 @@ const Notificaciones = () => {
   return (
     <div className="notificaciones-container">
       <h2>Notificaciones</h2>
+      {/* Badge global: se muestra si hay notificaciones no vistas */}
+      {unseenCount > 0 && (
+        <div className="global-badge">
+          Tienes {unseenCount} pedido{unseenCount > 1 ? "s" : ""} nuevo{unseenCount > 1 ? "s" : ""}
+        </div>
+      )}
       <div className="notifications-list">
         {notifications.length === 0 ? (
           <p>No hay notificaciones registradas.</p>
@@ -40,7 +48,7 @@ const Notificaciones = () => {
           notifications.map((notif) => (
             <div
               key={notif.id}
-              className={`notification-item ${!notif.viewed ? "unseen" : "seen"}`}
+              className={`notification-item ${notif.viewed === false ? "unseen" : "seen"}`}
               onClick={() => handleNotificationClick(notif.id)}
             >
               <p>
@@ -52,10 +60,9 @@ const Notificaciones = () => {
               <p>
                 <strong>Status:</strong> {notif.status}
               </p>
-              {!notif.viewed && (
-                <span className="notification-indicator">
-                  Nuevo
-                </span>
+              {/* Solo muestra "Nuevo" si el pedido no ha sido visto */}
+              {notif.viewed === false && (
+                <span className="notification-indicator">Nuevo</span>
               )}
             </div>
           ))
